@@ -1,0 +1,658 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to right, #ddcab1 30%, #9aa285 70%);
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ------------------------------ NAVIGATION ------------------------------- */
+.sidebar {
+    background-color: #001837;
+    width: 15%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    width: 50%;
+    height: 15%;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    padding: 10px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+    padding-right: 5px;
+}
+
+.sidebar ul li a:hover {
+    color: darkgray;
+}
+
+.sidebar p {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.line {
+    padding-top: 20px;
+}
+
+.nav-toggle {
+    overflow: hidden;
+}
+
+/* ------------------------------ HOME PAGE MAIN ------------------------------- */
+.main-content {
+    margin-left: 14%;
+    width: 85%;
+    padding: 0;
+}
+
+#home {
+    background-image: url("../img/hamster.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    padding: 100px 20px; 
+    min-height: 100vh; 
+}
+
+#home h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-shadow: #555;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* ------------------------------ HAMSTER PAGE MAIN ------------------------------- */
+.hamster img {
+    min-width: 100%;
+    max-height: 65vh;
+    display: block;
+}
+
+.hamster h1 {
+    position: absolute;
+    top: 7%;
+    left: 21.5%;
+    transform: translate(-50%, -50%);
+    color: #001837;
+    font-size: 2rem; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    margin: 0;
+    z-index: 1;
+}
+
+.hamster hr {
+    position: absolute;
+    top: 10%; 
+    left: 23%;
+    width: 10%; 
+    transform: translateX(-50%);
+    border: none;
+    border-top: 2px solid #001837; 
+}
+
+.hamster-info {
+    padding: 0 5%;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+/* ------------------------------ ABOUT PAGE MAIN ------------------------------- */
+#about {
+    min-height: 100%; 
+    text-align: center; 
+    padding: 20px; 
+}
+
+#about h1 {
+    color: #003366; 
+}
+
+#about p {
+    color: #333; 
+    margin: 10px 0; 
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 40px 0;
+    flex-wrap: wrap;
+    gap: 10%;
+}
+
+.card {
+    background-color: #c5af8f;
+    overflow: hidden;
+    box-shadow: -20px 20px 10px 0px #54442556;
+    width: 350px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.08);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: solid 3px black;
+}
+
+.card-content {
+    padding: 25px; 
+}
+
+.card-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.read-more-btn {
+    border: solid 2px black;
+    color: black;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.read-more-btn:hover {
+    background-color: #001837;
+    color: white;
+}
+
+.half {
+    width: 80%;
+    margin: auto;
+    border: solid 2px #001837;
+    box-shadow: -5px 5px 10px 0px #544425;
+}
+
+.data-table {
+    width: 80%; /* Adjust as necessary */
+    margin: 50px auto; /* Centers the table */
+    border-collapse: collapse; /* Semi-transparent background */
+    box-shadow: -15px 15px 10px 0px #54442556; /* Optional shadow for better visibility */
+}
+
+.data-table th, .data-table td {
+    border: 1px solid rgba(0, 0, 0, 0.274);
+    padding: 12px; /* Cell padding */
+    text-align: center;
+}
+
+.data-table th {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------ CONTACT PAGE MAIN ------------------------------- */
+.hamster-info {
+    padding: 0 5%;
+    text-align: left;
+    font-size: 20px;
+}
+
+.connect p {
+    padding-top: 4%;
+    padding-left: 5%;
+    color: #001837;
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.connect hr {
+    position: absolute;
+    top: 13%; 
+    left: 19%;
+    width: 20%; 
+    border: none;
+    border-top: 4px solid #001837; 
+}
+
+.self-info {
+    margin: 5% 0;
+}
+
+.picture {
+    width: 45%;
+    height: 600px;
+    float: left;
+}
+
+.picture img {
+    width: 80%;
+    border-radius: 5%;
+    margin-right: 40px;
+    float: right;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-me {
+    width: 50%;
+    height: 60%;
+    float: left;
+    padding-right: 5%;
+}
+
+#about-author {
+    text-align: justify;
+    text-justify: auto;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#soc-meds p {
+    color: #001837;
+    font-size: 27px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: -30px;
+}
+
+#soc-meds ul {
+    list-style-type: none;
+    width: 100%;
+    padding-top: 50px;
+}
+
+#soc-meds ul li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#soc-meds ul li a {
+    text-decoration: none;
+    color: #001837;
+    font-size: 20px;
+    display: flex;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#soc-meds ul li a i {
+    margin-right: 10px;
+    padding-right: 5px;
+}
+
+.phone {
+    margin-bottom: 20px;
+    padding-left: 19px;
+    text-align: left;
+    color: #001837;
+    font-size: 19px;
+}
+
+.phone i {
+    margin-right: 10px;
+    padding-right: 5px;
+}
+
+/* ------------------------------ ABOUT EXTENDED PAGE MAIN ------------------------------- */
+.about-extended img {
+    margin: auto;
+    width: 50%;
+    height: 50vh;
+    box-shadow: -10px 10px 10px 0 #54442556;
+}
+
+#about hr {
+    margin: auto;
+    width: 35%;
+    border: solid 2px #001837;
+}
+
+#about .paragraph {
+    margin: auto;
+    width: 80%;
+    text-align: justify;
+    text-justify: auto;
+    font-size: 20px;
+    line-height: 1.5em;
+    padding-bottom: 20px;
+}
+
+/* ------------------------------ FOOTER ------------------------------- */
+footer {
+    background-color: #544425;
+    color: white;
+    width: 85%;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+    bottom: 0;
+    position: fixed;
+    margin-left: .25%;
+    z-index: 5;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+footer a i {
+    margin-left: 7px;
+}
+
+/* ------------------------------ TABLET STYLES ------------------------------- */
+@media (max-width: 1180px) {
+    .sidebar {
+        width: 30%;
+    }
+
+    .main-content {
+        margin-left: 28%;
+        width: 72%; 
+    }
+
+    .hamster img {
+        max-width: 70%;
+        max-height: 65vh;
+        display: block;
+    }
+    
+    .hamster h1 {
+        left: 40%;
+    }
+    
+    .hamster hr {
+        left: 38%;
+    }
+
+    #home {
+        padding: 80px 10px;
+    }
+
+    #home h1 {
+        font-size: 28px;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    .picture {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-me {
+        width: 100%;
+    }
+
+    .about-extended img {
+        height: 200px;
+    }
+
+    #about .paragraph {
+        width: 95%;
+        margin: 15px;
+    }
+
+    .connect p {
+        font-size: 32px;
+        padding-top: 60px;
+    }
+
+    .connect hr {
+        top: 100px;
+        left: 33.5%;
+    }
+
+    .picture, .about-me {
+        width: 100%;
+        height: 100%;
+    }
+
+    .picture img {
+        margin-right: 55px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        border-radius: 0;
+    }
+
+    .about-me {
+        padding: 0;
+    }
+
+    #about-author {
+        margin: 15px;
+    }
+
+    .phone {
+        font-size: 16px;
+    }
+
+    .data-table {
+        width: 90%; 
+    }
+
+    #soc-meds p {
+        font-size: 22px; 
+    }
+
+    #soc-meds ul li a {
+        font-size: 18px; 
+    }
+
+    #soc-meds {
+        margin-bottom: 50px;
+    }
+
+    footer {
+        margin: auto;
+        padding-right: 110px;
+    }
+}
+
+
+/* ------------ MOBILE VIEWPORT ------------ */
+@media (max-width: 390px) {
+    .sidebar {
+        width: 80%; /* Sidebar takes up 80% of the screen when shown */
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -80%; /* Initially hide the sidebar */
+        transition: left 0.3s ease; /* Smooth slide-in animation */
+    }
+
+    .sidebar.active {
+        left: 0; /* Sidebar slides in when active */
+    }
+
+    .logo {
+        width: 100px; /* Smaller logo */
+        height: 100px;
+    }
+
+    .main-content {
+        width: 100%; /* Full width for main content */
+        margin-left: 0; /* No sidebar margin */
+    }
+
+    #home {
+        padding: 50px 10px; /* Adjust padding for smaller screen */
+    }
+
+    #home h1 {
+        font-size: 24px; /* Smaller font for headings */
+    }
+
+    .hamster h1 {
+        font-size: 1.5rem; /* Adjust hamster page heading size */
+        left: 20%;
+    }
+
+    .hamster hr {
+        width: 12%; /* Narrower line */
+        left: 14%;
+    }
+
+    .hamster-info {
+        font-size: 16px;
+        text-align: justify;
+        text-justify: auto;
+    }
+
+    .card {
+        width: 90%; /* Full-width cards */
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
+
+    .data-table {
+        width: 90%; /* Adjust as necessary */
+        margin: auto;
+        border-collapse: collapse; /* Semi-transparent background */
+        box-shadow: -15px 15px 10px 0px #54442556; /* Optional shadow for better visibility */
+        margin-bottom: 40px;
+    }
+    
+    .data-table th, .data-table td {
+        border: 1px solid rgba(0, 0, 0, 0.274);
+        padding: 6px; /* Cell padding */
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .picture {
+        width: 100%; /* Full-width for images */
+        height: auto; /* Auto height to maintain aspect ratio */
+    }
+
+    .about-extended img {
+        width: 80%;
+        height: 10%;
+    }
+
+    #about .paragraph {
+        font-size: 16px;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+
+    /* Floating circular button for the sidebar toggle */
+    .nav-toggle {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        background-color: #001837;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 999; /* Ensure it's above other elements */
+    }
+
+    .nav-toggle i {
+        color: white;
+        font-size: 24px;
+    }
+
+    .connect p{
+        margin: auto;
+        margin-bottom: -20px;
+    }
+    
+    .connect hr {
+        left: 5%;
+        border-top: 2px solid #001837; 
+    }
+
+    #about-author {
+        font-size: 16px;
+    }
+
+    .picture, .about-me {
+        width: 100%;
+        height: 100%;
+    }
+
+    .picture img {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        margin-right: 37px;
+        border-radius: 0;
+    }
+
+    .about-me {
+        padding: 0;
+    }
+
+    footer {
+        width: 100%;
+        padding: 6px 0;
+        margin: 0;
+        font-size: 13px;
+    }
+
+    footer a i {
+        font-size: 13px;
+    }
+}
